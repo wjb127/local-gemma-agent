@@ -2,7 +2,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$venvPython = Join-Path $projectRoot ".venv\Scripts\python.exe"
+$venvPython = Join-Path $projectRoot ".venv\Scripts\pythonw.exe"
 
 if (-not (Test-Path $venvPython)) {
     Write-Error "Virtual environment not found. Run .\bootstrap.ps1 first."
